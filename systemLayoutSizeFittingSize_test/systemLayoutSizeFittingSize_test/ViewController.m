@@ -6,7 +6,6 @@
 //  Copyright © 2016年 stone. All rights reserved.
 //
 
-#import "SNModel.h"
 #import "SNTableViewCell.h"
 #import "ViewController.h"
 #import "SNZhuxianModel.h"
@@ -14,9 +13,6 @@
 #import "SNHeightManager.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
-
-/** models */
-@property(nonatomic, strong) NSArray<SNModel *> * models;
 
 /** zhuxianmodels */
 @property(nonatomic, strong) NSArray<SNMartial *> * zhuxianmodels;
@@ -40,14 +36,6 @@
     return _managers;
 }
 //===================================== stone ===========/
-
-/** models 懒加载 */
-- (NSArray<SNModel *> *)models {
-    if (_models == nil) {
-        _models = [SNModel models];
-    }
-    return _models;
-}
 
 /** models 懒加载 */
 - (NSArray<SNMartial *> *)zhuxianmodels {
